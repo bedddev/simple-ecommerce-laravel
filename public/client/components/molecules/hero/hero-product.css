@@ -1,0 +1,60 @@
+.hero-product {
+    height: 24rem;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 1.5rem;
+    transition: 0.2s cubic-bezier(0.57, 0, 0.06, 0.95);
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-product:hover {
+    transition: 0.2s cubic-bezier(0.57, 0, 0.06, 0.95);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.hero-product:hover::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(
+        180deg,
+        rgba(37, 57, 111, 0.73) 0%,
+        rgba(37, 57, 111, 0.51) 23.39%,
+        rgba(37, 57, 111, 0) 92.57%
+    );
+    border-radius: 1.5rem;
+    transition: 0.9s cubic-bezier(0.57, 0, 0.06, 0.95);
+}
+
+.hero-product > div {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    z-index: 10 !important;
+    position: relative;
+    padding: 1.3rem;
+    transition: 0.5s cubic-bezier(0.57, 0, 0.06, 0.95);
+}
+
+.hero-product:hover > div {
+    opacity: 1;
+    transition: 0.5s cubic-bezier(0.57, 0, 0.06, 0.95);
+}
+
+.hero-product > div > p {
+    font-size: 1.4rem;
+}
+
+@media screen and (max-width: 767px) {
+    .hero-product {
+        height: 12rem;
+    }
+
+    .hero-product > div > p {
+        font-size: 1rem;
+    }
+}

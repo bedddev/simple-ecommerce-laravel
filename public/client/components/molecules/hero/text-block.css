@@ -1,0 +1,34 @@
+.text-block-hero {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.text-block-hero h1 {
+    font-size: 5.5rem;
+    font-weight: 400;
+    line-height: 101.9%;
+    width: 65%;
+}
+
+.text-block-hero p {
+    line-height: 33px;
+    font-size: 1.5rem;
+    width: 80%;
+    margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 767px) {
+    .text-block-hero h1,
+    .text-block-hero p {
+        width: 100%;
+    }
+
+    .text-block-hero h1 {
+        font-size: 3rem;
+    }
+
+    .text-block-hero p {
+        font-size: 1.1rem;
+        margin-top: 0.8rem;
+    }
+}
