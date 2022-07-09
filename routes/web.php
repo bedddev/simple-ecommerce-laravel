@@ -72,16 +72,16 @@ Route::middleware(['auth'])->group(function () {
     // Product
     Route::controller(ProductController::class)->group(function() {
         Route::get('/admin/products', 'index')->name('products');
-        Route::get('/product/create', 'create')->name('productCreate');
-        Route::post('/product/check', 'check')->name('productCheck');
-        Route::post('/product/save', 'save')->name('producSave');
-        Route::post('/product/images/', 'getImages')->name('productGetImages');
-        Route::get('/product/images/{product}', 'addImages')->name('productAddImages');
-        Route::post('/product/images/save', 'addImagesSave')->name('productAddImagesSave');
-        Route::post('/product/images/delete', 'deleteImages')->name('productDeleteImages');
-        Route::get('/product/edit/{product}', 'edit')->name('productEdit');
-        Route::post('/product/edit/{product}/{id}/save', 'editSave')->name('productEditSave');
-        Route::get('/product/delete/{id}', 'delete')->name('productDelete');
+        Route::get('/admin/product/create', 'create')->name('productCreate');
+        Route::post('/admin/product/check', 'check')->name('productCheck');
+        Route::post('/admin/product/save', 'save')->name('producSave');
+        Route::post('/admin/product/images/', 'getImages')->name('productGetImages');
+        Route::get('/admin/product/images/{product}', 'addImages')->name('productAddImages');
+        Route::post('/admin/product/images/save', 'addImagesSave')->name('productAddImagesSave');
+        Route::post('/admin/product/images/delete', 'deleteImages')->name('productDeleteImages');
+        Route::get('/admin/product/edit/{product}', 'edit')->name('productEdit');
+        Route::post('/admin/product/edit/{product}/{id}/save', 'editSave')->name('productEditSave');
+        Route::get('/admin/product/delete/{id}', 'delete')->name('productDelete');
     });
 
     // Orders

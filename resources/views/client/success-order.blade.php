@@ -5,9 +5,9 @@
       <div class="text-center">
         <h4>Thank you so much for your order</h4>
         <p>Order Code : <u><b class="text-danger">{{ $order_code }}</b></u></p>
-        <p>You can always track your orders in the <a href=""><u>Check Order</u></a>, please keep and don't forget this code for check status order.</p>
+        <p>You can always track your orders in the <a href="{{ route('clientCheckOrder') }}"><u>Check Order</u></a>, please keep and don't forget this code for check status order.</p>
       </div>
-      <a href="" class="btn btn-primary">Check Order Now</a>
+      <a href="{{ route('clientCheckOrder') }}" class="btn btn-primary">Check Order Now</a>
     </div>
   <x-organisms.footer :shop="$shop"/>
 </x-template.layout>
