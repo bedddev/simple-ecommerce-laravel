@@ -16,6 +16,10 @@ class ClientController extends Controller
 {
     public function index(){
 
+        if(!Shop::exists()){
+            return redirect()->route('register');
+        }
+
         $data = [
             'shop' => Shop::first(),
             'product' => Product::all()->sortByDesc('id')->take(8),
