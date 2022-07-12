@@ -28,7 +28,7 @@
                   @elseif($order->status == 4)
                     <span class="badge bg-secondary">Shipping</span>
                   @elseif($order->status == 5)
-                    <span class="badge bg-success">Shipping</span>
+                    <span class="badge bg-success">Completed</span>
                   @endif
                 </button>
               </td>
